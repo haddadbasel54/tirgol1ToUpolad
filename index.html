@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #app {
+            width: 300px;
+            height: 300px;
+            margin: 2px auto;
+            border: 10px solid rgb(24, 22, 22);
+            background-color: rgb(13, 139, 189);
+        }
+        #monitor {
+            background-color: rgb(63, 214, 16);
+            color:rgb(255, 255, 255);
+            font-weight: bold;
+            font-size:30px;
+            margin:2px;
+            padding:5px;
+            border-radius: 5px;
+            height:80px;
+        }
+        .d-btn {
+            float: left;
+            width: calc(20% - 5px);
+            height: calc(50px);
+            margin: 2px;
+            text-align: center;
+            font-weight: bold; 
+            line-height: 40px; 
+            background-color: rgb(35, 5, 99);
+            color: rgb(223, 218, 231);
+            padding: 5px 0px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+
+        .d-btn:hover{
+            background-color:rgb(21, 179, 42);
+        }
+
+        .oprate-btn {
+            float: left;
+            width: calc(20% - 5px);
+            height: calc(50px);
+            margin: 2px;
+            background-color:rgb(194, 16, 194);
+            text-align: center;
+            font-weight: bold; 
+            line-height: 40px; 
+            color: rgb(223, 218, 231);
+            padding: 5px 0px;
+            cursor: pointer;
+        }
+        .oprate-btn:hover{
+            background-color:rgb(21, 179, 42);
+        }
+
+    </style>
+</head>
+<body class="dark:text-white light:text-black">
+    <!-- your app code goes here -->
+     <!-- test -->
+     <div id="app">
+        <div id="monitor"></div>
+        <div>
+            <div class="d-btn">1</div>
+            <div class="d-btn">2</div>
+            <div class="d-btn">3</div>
+            <div class="oprate-btn">+</div>
+            <div class="oprate-btn">-</div>
+            <div style="clear:both"></div>
+        </div>
+        <div>
+            <div class="d-btn">4</div>
+            <div class="d-btn">5</div>
+            <div class="d-btn">6</div>
+            <div class="oprate-btn">*</div>
+            <div class="oprate-btn">/</div>
+            <div style="clear:both"></div>
+        </div>
+        <div>
+            <div class="d-btn">7</div>
+            <div class="d-btn">8</div>
+            <div class="d-btn">9</div>
+            <div class="oprate-btn">^</div>
+            <div class="oprate-btn">=</div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+    <!-- special scripts for integration in App Gallery - must be placed at the bottom of the HTML after your code -->
+    <script>
+        // custom config for the MTW app 
+        const mtwAppConfig = {
+            border: true // app border in the MTW page                    
+        }
+
+        ///////////////////////////////////////////////////////
+        // implement this functions in order to use private API        
+        const sendPrivateApiRequest = async () => {
+            // your code here:
+            // sendRequestToParent({ cat: 'getAssets' })
+        }        
+
+        const acceptPrivateApiResponse = async (data) => {
+            // process received data here:
+            // console.log(data)
+        }
+
+        // use this in order to send on document load
+        document.addEventListener('DOMContentLoaded', () => {
+            // your code here:
+            //sendRequestToParent({ method: 'getAssets' })
+        })
+    </script>
+    <script src="https://morethanwallet.com/appstore/index.js"></script>
+</body>
+</html>
